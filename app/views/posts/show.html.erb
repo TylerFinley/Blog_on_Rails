@@ -1,0 +1,32 @@
+<h1><%= @post.name %></h1>
+
+<% if @post.details.any? %>
+<h4>Here are the details for this post:</h4>
+
+
+<ul>
+  <% @post.details.each do |detail| %>
+  <li>
+    <%= link_to detail.name, post_detail_path(@post, detail) %> |
+    <%= link_to "Edit", edit_post_detail_path(@post, detail) %> |
+    <%= link_to "Delete", post_detail_path(@post, detail),
+    :data => {:confirm => "Are you sure?",
+      :method => "delete"} %>
+    </li>
+    <% end %>
+  </ul>
+  <% else %>
+  <p> There are no details yet!</p>
+  <% end %>
+
+  <p><%= link_to "Add an Detail", new_post_detail_path(@post) %></p>
+
+<hr>
+<ul>
+  <li><%= link_to "Edit post", edit_post_path %></li>
+  <li><%= link_to "Return to posts", posts_path %></li>
+  <li><%= link_to "Add a new post", new_post_path %></li>
+  <li><%= link_to "Delete post", post_path(@post),
+  :data => {:confirm => "Are you sure?",
+    :method => "delete"} %></li>
+</ul>

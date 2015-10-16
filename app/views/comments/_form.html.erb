@@ -1,0 +1,18 @@
+<%= render('layouts/errors', :object => @review) %>
+
+<%= form_for [@artist, @review] do |f| %>
+<%= f.text_area :critique %>
+
+<%= radio_button_tag(:rating, "1 star") %>
+<%= label_tag(:one_star, "1 star") %>
+<%= radio_button_tag(:rating, "2 stars") %>
+<%= label_tag(:two_star, "2 stars") %>
+<%= radio_button_tag(:rating, "3 stars") %>
+<%= label_tag(:three_star, "3 stars") %>
+<%= radio_button_tag(:rating, "4 stars") %>
+<%= label_tag(:four_star, "4 stars") %>
+<%= radio_button_tag(:rating, "5 stars") %>
+<%= label_tag(:five_star, "5 stars") %>
+<p><%= f.submit %></p>
+
+<% end %>
