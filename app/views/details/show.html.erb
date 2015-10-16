@@ -4,7 +4,7 @@
 <h3>Here are the comments for this detail:</h3>
 <ul>
   <% @detail.comments.each do |comment| %>
-  <br><li><b>User Review: </b><i><%= comment.critique %></i></li>
+  <br><li><b>User Review: </b><i><%= comment.description %></i></li>
   <li><b>User Rating: </b><i><%= comment.rating %> Stars</i></li>
     <% end %>
 
@@ -17,4 +17,4 @@
 <br>
 <%= link_to "Add a Review", new_detail_comment_path(@detail) %>
 <hr>
-<p><%= link_to "Return to Artists", post_path(@post) %><p>
+<p><%= link_to "Return to details", post_path(@post) %><p>

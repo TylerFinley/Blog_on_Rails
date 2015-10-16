@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
     @comment = @detail.comments.new(comment_params)
     @comment.rating = params[:rating]
     if @comment.save
-      redirect_to genre_path(@detail.genre)
+      redirect_to post_path(@detail.post)
     else
       render :new
     end
@@ -47,5 +47,5 @@ end
 
 private
 def comment_params
-  params.require(:comment).permit(:critique)
+  params.require(:comment).permit(:description)
 end

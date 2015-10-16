@@ -1,4 +1,4 @@
-class Genre < ActiveRecord::Base
+class Post < ActiveRecord::Base
   has_many :details
 
   validates :name, :presence => true

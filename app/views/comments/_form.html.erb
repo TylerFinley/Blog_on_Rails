@@ -1,7 +1,7 @@
-<%= render('layouts/errors', :object => @review) %>
+<%= render('layouts/errors', :object => @comment) %>
 
-<%= form_for [@artist, @review] do |f| %>
-<%= f.text_area :critique %>
+<%= form_for [@detail, @comment] do |f| %>
+<%= f.text_area :description %>
 
 <%= radio_button_tag(:rating, "1 star") %>
 <%= label_tag(:one_star, "1 star") %>
