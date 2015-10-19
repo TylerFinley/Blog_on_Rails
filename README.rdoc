@@ -6,9 +6,7 @@ Set-up 1.Clone to desktop 2.Start Postgres 3.Rake db:create 4.Rake db:migrate 5.
 
 Description
 
-Users can:
 
-create a genre create a band write a review for each band edit/delete genre name, band, and review
 
 Ruby on rails ActiveRecord Bootstrap Legal
 
