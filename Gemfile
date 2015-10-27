@@ -1,14 +1,16 @@
 source 'https://rubygems.org'
+
 gem 'sqlite3'
 gem 'rails'
 gem 'pg'
-gem 'sass-rails'
+gem 'sass-rails', '>= 3.2'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.5'
-
+gem 'sass-rails', '>= 3.2'
 
 group :development do
   gem 'byebug'
@@ -24,6 +26,8 @@ group :test, :development do
 end
 
 group :test do
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '3.0'
+  gem 'factory_girl_rails'
+  gem 'simplecov', require: false
   gem 'capybara'
 end

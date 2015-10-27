@@ -1,14 +1,17 @@
-<div class="page-header">
-  <h1>BLOGS <i><small>The most posts</small></i></h1>
-</div>
-<hr>
-<h3>The Blogs</h3>
-<ul>
-  <% @posts.each do |post| %>
-  <li><%= link_to post.name, post_path(post) %></li>
-<% end %>
-</ul>
 
-<hr>
+      <% @posts.each do |post| %>
 
-<%= link_to "Add New Blog post", new_post_path %>
+      <br><br>
+      <div>
+
+      <%= link_to post.name, post_path(post)  %> <br>by <%=post.user ? post.user.email : '' %>
+    </div>
+
+    <hr>
+
+
+
+
+      </li>
+    </ul>
+    <% end %>

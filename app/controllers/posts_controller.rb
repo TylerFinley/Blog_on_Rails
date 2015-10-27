@@ -11,6 +11,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+
     render :new
   end
 
@@ -45,6 +46,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:name)
+    params.require(:post).permit(:name, :user_id, :author)
   end
 end
